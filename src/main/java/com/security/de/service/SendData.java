@@ -1,30 +1,24 @@
-package com.security.de.secureService.secureService;
+package com.security.de.service;
+
+import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
 
 import java.io.Serializable;
 
+@Getter
+@AllArgsConstructor(access = AccessLevel.PROTECTED)
 final class SendData implements Serializable{
+
     static final long serialVersionUID = 1L;
+
     private byte[] envelope; //전자봉투
+
     private byte[] encryptedData; //암호화한 원본 데이터
-    private String encryptedSignFileName;
+
+    private String encryptedSignFileName; // 암호화된 사인 파일명
+
     private String senderId; //송신자 id
 
-    SendData(){}
-    SendData(byte[] envelope, byte[] encryptedData, String encryptedSignFileName, String senderId) {
-        this.envelope = envelope;
-        this.encryptedData = encryptedData;
-        this.encryptedSignFileName = encryptedSignFileName;
-        this.senderId = senderId;
-    }
-
-    String getEncryptedSignFileName() {
-        return encryptedSignFileName;
-    }
-    byte[] getEnvelope() {
-        return envelope;
-    }
-    byte[] getEncryptedData() {
-        return encryptedData;
-    }
 }
 
