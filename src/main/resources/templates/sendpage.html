@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>메세지 보내기</title>
+    <link rel="stylesheet" href="/style/style.css">
+</head>
+<body>
+<div class="container">
+    <h2>메세지 보내기</h2>
+    <h3>전자봉투 생성</h3>
+    <form name="message" action="/messages/send" method="post">
+        <label for="senderId">송신자 ID:</label>
+        <input type="text" id="senderId" name="senderId" placeholder="Enter your ID" required>
+
+        <label for="receiverId">수신자 ID:</label>
+        <input type="text" id="receiverId" name="receiverId" placeholder="Enter receiver ID" required>
+
+        <label for="contents">메시지:</label>
+        <input type="text" id="contents" name="contents" placeholder="메세지를 입력하세요" required>
+
+        <button type="submit">전송</button>
+    </form>
+    <p th:text="${error}" class="error-message"></p>
+    <form action="/">
+        <button type="submit">홈으로 돌아가기</button>
+    </form>
+</div>
+</body>
+</html>

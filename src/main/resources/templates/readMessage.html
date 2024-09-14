@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>메세지 읽기</title>
+    <link rel="stylesheet" href="/style/style.css">
+</head>
+<body>
+<div class="container">
+    <h2>메세지 읽기 (전자봉투 개봉)</h2>
+    <form action="/messages/read" method="post" class="message-form">
+        <label for="senderId">보낸 사람 ID:</label>
+        <input type="text" id="senderId" name="senderId" placeholder="제목을 입력해주세요" required>
+
+        <label for="receiverId">받는 사람 ID:</label>
+        <input type="text" id="receiverId" name="receiverId" placeholder="아이디를 입력해주세요" required>
+
+        <button type="submit">확인</button>
+    </form>
+
+    <hr class="separator">
+
+    <div class="result">
+        <h3>메세지 내용:</h3>
+        <p th:text="${message}" class="message-content"></p>
+
+        <h3>오류:</h3>
+        <p th:text="${error}" class="error-message"></p>
+
+        <h3>전자서명 유효성 검사:</h3>
+        <p th:text="${invalidSign}" class="sign-validation"></p>
+    </div>
+</div>
+</body>
+</html>

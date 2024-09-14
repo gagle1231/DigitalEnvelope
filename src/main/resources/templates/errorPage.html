@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>오류 발생</title>
+  <link rel="stylesheet" href="/style/style.css">
+</head>
+<body>
+<div class="container">
+  <h2>문제가 발생했습니다.</h2>
+  <p th:text="${error}"></p>
+  <form action="/">
+    <button type="submit">홈으로 돌아가기</button>
+  </form>
+</div>
+</body>
+</html>

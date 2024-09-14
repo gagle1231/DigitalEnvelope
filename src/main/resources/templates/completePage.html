@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>메세지</title>
+    <link rel="stylesheet" href="/style/style.css">
+</head>
+<body>
+<div class="container">
+    <div class="message-box">
+        <p th:text="'안녕하세요. ' + ${message}" class="greeting-message"></p>
+    </div>
+    <form th:action="@{/}" class="home-form">
+        <button type="submit">홈으로 돌아가기</button>
+    </form>
+</div>
+</body>
+</html>
