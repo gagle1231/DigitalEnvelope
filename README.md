@@ -70,7 +70,7 @@ src/
 
 1. 프로젝트를 클론합니다.
    ```bash
-   git clone https://github.com/username/repo-name.git
+   git clone https://github.com/gagle1231/DigitalEnvelope.git
    ```
 
 2. 필수 환경 설정 application.properties 파일에서 서명 및 데이터 저장 경로 등을 설정해 주세요.
@@ -80,8 +80,3 @@ src/
    ```
 
 <br>
-
-## 개선 사항
-- 더 나은 보안성을 위해 사용자의 인증 및 권한 관리 시스템 추가
-- 데이터 DB 연동
-- 비동기 메시지 처리 기능 구현
